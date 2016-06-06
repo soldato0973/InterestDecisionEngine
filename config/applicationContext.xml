@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+  
+	<bean id="MetadataManager" class="com.voyage.model.business.manager.MetadataManager">
+		 <property name="applicationSvc" ref="applicationSvc" />
+		 <property name="releaseSvc" ref="releaseSvc" />	
+		 <property name="loginSvc" ref="loginSvc"/>		
+	</bean>
+	
+	<bean id="applicationSvc" class="com.voyage.model.services.applicationservice.ApplicationSvcHibernateImpl">
+		 <!-- <property name="applicationDao" ref="applicationDao" /> -->
+	</bean>
+
+	<bean id="releaseSvc" class="com.voyage.model.services.releaseservice.ReleaseSvcHibernateImpl" >
+		 <!-- <property name="releaseDao" ref="releaseDao" /> -->
+	</bean>
+	
+	<bean id="loginSvc" class="com.voyage.model.services.loginservice.LoginSvcHibernateImpl" >
+		 <!-- <property name="loginDao" ref="loginDao" /> -->
+	</bean>
+
+	<!--	Uncomment to use Hibernate implementation -->		
+	<!--
+	<bean id="fleetRentalDao" class="com.fleetrentalspringsample.model.dao.hibernate.FleetRentalHibernateDaoImpl" />
+ -->
+	
+	<!-- <bean id="applicationDao" class="com.voyage.model.services.applicationservice.ApplicationSvcHibernateImpl" >
+		 <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/voyage" />
+		 <property name="jdbcUser" value="root" />
+		 <property name="jdbcPassword" value="admin" /> 
+	</bean> -->
+        
+       <!--   <bean id="releaseDao" class="com.voyage.model.services.releaseservice.ReleaseSvcHibernateImpl" >
+		 <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/voyage" />
+		 <property name="jdbcUser" value="root" />
+		 <property name="jdbcPassword" value="admin" />
+	</bean> -->
+       
+</beans>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.voyage.model.domain.Application" table="application" catalog="voyage">    
+        <id name="appID" type="java.lang.Integer">
+            <column name="appID" not-null="true"/>
+        </id>
+        <property name="appName" type="java.lang.String">
+            <column name="appName" length="50"/>
+        </property>     
+        <property name="appVendor" type="java.lang.String">
+            <column name="appVendor" length="50"/>
+        </property>
+        <property name="applicationType" type="java.lang.String">
+            <column name="applicationType" length="50"/>
+        </property>
+        <property name="appVers" type="java.lang.String">
+            <column name="appVers" length="20"/>
+        </property>
+        <property name="appState" type="java.lang.String">
+            <column name="appState" length="20"/>
+        </property>
+        <property name="appProdName" type="java.lang.String">
+            <column name="appProdName" length="50"/>
+        </property>
+        <property name="appFileSize" type="java.lang.String">
+            <column name="appFileSize" length="20"/>
+        </property>
+        <property name="appCheckSum" type="java.lang.String">
+            <column name="appCheckSum" length="20"/>
+        </property>
+        <property name="appDescription" type="java.lang.String">
+            <column name="appDescription" length="50"/>
+        </property>
+        <property name="appURL" type="java.lang.String">
+            <column name="appURL" length="40"/>
+        </property>
+        <property name="appContactName" type="java.lang.String">
+            <column name="appContactName" length="40"/>
+        </property>
+        <property name="appContactEmail" type="java.lang.String">
+            <column name="appContactEmail" length="40"/>
+        </property>
+    </class>
+</hibernate-mapping>

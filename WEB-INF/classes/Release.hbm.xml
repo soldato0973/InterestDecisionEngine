@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.voyage.model.domain.Release" table="releases" catalog="voyage">     
+        <id name="releaseName" type="java.lang.String">
+            <column name="relName" length="50"/>
+        </id>   
+        <property name="releaseNumber" type="java.lang.String">
+            <column name="relNumber" length="40"/>
+        </property>
+        <property name="releaseType" type="java.lang.String">
+            <column name="relType" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

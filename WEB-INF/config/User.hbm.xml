@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.voyage.model.domain.User" table="user" catalog="voyage">    
+        <id name="userName" type="java.lang.String">
+            <column name="userName" not-null="true"/>
+        </id>
+        <property name="lastName" type="java.lang.String">
+            <column name="lastName" length="50"/>
+        </property>     
+        <property name="firstName" type="java.lang.String">
+            <column name="firstName" length="50"/>
+        </property>
+        <property name="emailAddress" type="java.lang.String">
+            <column name="emailAddress" length="50"/>
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password" length="50"/>
+        </property>
+        <property name="dayTimePhone" type="java.lang.String">
+            <column name="dayTimePhone" length="50"/>
+        </property>
+        <property name="eveningTimePhone" type="java.lang.String">
+            <column name="eveningTimePhone" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>
